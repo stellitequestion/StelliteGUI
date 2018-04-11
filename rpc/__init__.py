@@ -176,8 +176,8 @@ class WalletRPCRequest():
     def transfer_split(self, amount, address, payment_id, priority, mixin):
         rpc_input = {"method": "transfer_split"}
         params = {"destinations": [{"amount" : amount, "address": address}],
-                  "priority": priority,
-                  "mixin": mixin}
+                  "priority": 3,
+                  "mixin": 1}
         if payment_id:
             params["payment_id"] = payment_id
         
