@@ -1,4 +1,4 @@
-# Copyright (c) 2014-2017, The Stellite Project
+# Copyright (c) 2014-2017, The Monero Project
 #
 # All rights reserved.
 #
@@ -70,9 +70,9 @@ set(common_private_headers
   thread_group.h
   updates.h)
 
-stellite_private_headers(common
+monero_private_headers(common
   ${common_private_headers})
-stellite_add_library(common
+monero_add_library(common
   ${common_sources}
   ${common_headers}
   ${common_private_headers})
@@ -91,5 +91,5 @@ target_link_libraries(common
     ${OPENSSL_LIBRARIES}
     ${EXTRA_LIBRARIES})
 
-#stellite_install_headers(common
+#monero_install_headers(common
 #  ${common_headers})

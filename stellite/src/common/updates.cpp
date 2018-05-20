@@ -1,4 +1,4 @@
-// Copyright (c) 2017, The Stellite Project
+// Copyright (c) 2017, The Monero Project
 //
 // All rights reserved.
 //
@@ -43,7 +43,7 @@ namespace tools
 
     MDEBUG("Checking updates for " << buildtag << " " << software);
 
-    // All four StellitePulse domains have DNSSEC on and valid
+    // All four MoneroPulse domains have DNSSEC on and valid
     static const std::vector<std::string> dns_urls = {
         "updates.stellite.io"
     };
@@ -95,7 +95,7 @@ namespace tools
 
   std::string get_update_url(const std::string &software, const std::string &subdir, const std::string &buildtag, const std::string &version, bool user)
   {
-    const char *base = user ? "https://downloads.getstellite.org/" : "http://updates.getstellite.org/";
+    const char *base = user ? "https://downloads.getmonero.org/" : "http://updates.getmonero.org/";
 #ifdef _WIN32
     static const char extension[] = ".zip";
 #else

@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2017, The Stellite Project
+// Copyright (c) 2014-2017, The Monero Project
 // 
 // All rights reserved.
 // 
@@ -191,12 +191,12 @@ t_command_server::t_command_server(
     m_command_lookup.set_handler(
       "start_save_graph"
     , std::bind(&t_command_parser_executor::start_save_graph, &m_parser, p::_1)
-    , "Start save data for dr stellite"
+    , "Start save data for dr monero"
     );
     m_command_lookup.set_handler(
       "stop_save_graph"
     , std::bind(&t_command_parser_executor::stop_save_graph, &m_parser, p::_1)
-    , "Stop save data for dr stellite"
+    , "Stop save data for dr monero"
     );
     m_command_lookup.set_handler(
       "hard_fork_info"

@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2017, The Stellite Project
+// Copyright (c) 2014-2017, The Monero Project
 //
 // All rights reserved.
 //
@@ -180,4 +180,4 @@ AddressBookImpl::~AddressBookImpl()
 
 } // namespace
 
-namespace Bitstellite = Monero;
+namespace Bitmonero = Monero;

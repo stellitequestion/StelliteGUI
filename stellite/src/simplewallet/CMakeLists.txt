@@ -1,4 +1,4 @@
-# Copyright (c) 2014-2017, The Stellite Project
+# Copyright (c) 2014-2017, The Monero Project
 #
 # All rights reserved.
 #
@@ -34,9 +34,9 @@ set(simplewallet_headers)
 set(simplewallet_private_headers
   simplewallet.h)
 
-stellite_private_headers(simplewallet
+monero_private_headers(simplewallet
   ${simplewallet_private_headers})
-stellite_add_executable(simplewallet
+monero_add_executable(simplewallet
   ${simplewallet_sources}
   ${simplewallet_headers}
   ${simplewallet_private_headers})

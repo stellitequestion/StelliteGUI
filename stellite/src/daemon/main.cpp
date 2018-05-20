@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2017, The Stellite Project
+// Copyright (c) 2014-2017, The Monero Project
 //
 // All rights reserved.
 //
@@ -126,10 +126,10 @@ int main(int argc, char const * argv[])
       return 0;
     }
 
-    // Stellite Version
+    // Monero Version
     if (command_line::get_arg(vm, command_line::arg_version))
     {
-      std::cout << "Stellite '" << MONERO_RELEASE_NAME << "' (v" << MONERO_VERSION_FULL << ")" << ENDL;
+      std::cout << "Monero '" << MONERO_RELEASE_NAME << "' (v" << MONERO_VERSION_FULL << ")" << ENDL;
       return 0;
     }
 
@@ -157,7 +157,7 @@ int main(int argc, char const * argv[])
     auto data_dir_arg = testnet_mode ? command_line::arg_testnet_data_dir : command_line::arg_data_dir;
 
     // data_dir
-    //   default: e.g. ~/.bitstellite/ or ~/.bitstellite/testnet
+    //   default: e.g. ~/.bitmonero/ or ~/.bitmonero/testnet
     //   if data-dir argument given:
     //     absolute path
     //     relative path: relative to cwd

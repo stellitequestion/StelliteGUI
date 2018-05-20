@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2017, The Stellite Project
+// Copyright (c) 2014-2017, The Monero Project
 //
 // All rights reserved.
 //
@@ -174,5 +174,5 @@ uint64_t PendingTransactionImpl::txCount() const
 
 }
 
-namespace Bitstellite = Monero;
+namespace Bitmonero = Monero;
 

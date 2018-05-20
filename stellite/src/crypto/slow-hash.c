@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2018, The Stellite Project
+// Copyright (c) 2014-2018, The Monero Project
 //
 // All rights reserved.
 //
@@ -53,13 +53,19 @@ extern int aesb_pseudo_round(const uint8_t *in, uint8_t *out, const uint8_t *exp
 
 #endif
 #define VARIANT1_1(p) \
-  do if (variant > 0) \
+  if (variant > 1) \
   { \
+    const uint8_t tmp = ((const uint8_t*)(p))[11]; \
+    static const uint32_t table = 0x75312; \
+    const uint8_t index = (((tmp >> 4) & 6) | (tmp & 1)) << 1; \
+    ((uint8_t*)(p))[11] = tmp ^ ((table >> index) & 0x30); \
+  }  \
+  else{ \
     const uint8_t tmp = ((const uint8_t*)(p))[11]; \
     static const uint32_t table = 0x75310; \
     const uint8_t index = (((tmp >> 3) & 6) | (tmp & 1)) << 1; \
     ((uint8_t*)(p))[11] = tmp ^ ((table >> index) & 0x30); \
-  } while(0)
+  }
 
 #define VARIANT1_2(p) \
   do if (variant > 0) \
@@ -308,7 +314,7 @@ STATIC INLINE void aes_256_assist2(__m128i* t1, __m128i * t3)
  * of the AES encryption used to fill (and later, extract randomness from)
  * the large 2MB buffer.  Note that CryptoNight does not use a completely
  * standard AES encryption for its buffer expansion, so do not copy this
- * function outside of Stellite without caution!  This version uses the hardware
+ * function outside of Monero without caution!  This version uses the hardware
  * AESKEYGENASSIST instruction to speed key generation, and thus requires
  * CPU AES support.
  * For more information about these functions, see page 19 of Intel's AES instructions
@@ -539,7 +545,7 @@ void slow_hash_free_state(void)
 }
 
 /**
- * @brief the hash function implementing CryptoNight, used for the Stellite proof-of-work
+ * @brief the hash function implementing CryptoNight, used for the Monero proof-of-work
  *
  * Computes the hash of <data> (which consists of <length> bytes), returning the
  * hash in <hash>.  The CryptoNight hash operates by first using Keccak 1600,

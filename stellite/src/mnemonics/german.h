@@ -1,6 +1,6 @@
-// Word list created by Stellite contributor Shrikez
+// Word list created by Monero contributor Shrikez
 // 
-// Copyright (c) 2014-2017, The Stellite Project
+// Copyright (c) 2014-2017, The Monero Project
 // 
 // All rights reserved.
 // 

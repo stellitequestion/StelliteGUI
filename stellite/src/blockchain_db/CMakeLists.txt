@@ -1,4 +1,4 @@
-# Copyright (c) 2014-2017, The Stellite Project
+# Copyright (c) 2014-2017, The Monero Project
 #
 # All rights reserved.
 #
@@ -53,9 +53,9 @@ if (BERKELEY_DB)
   )
 endif()
 
-stellite_private_headers(blockchain_db
+monero_private_headers(blockchain_db
   ${crypto_private_headers})
-stellite_add_library(blockchain_db
+monero_add_library(blockchain_db
   ${blockchain_db_sources}
   ${blockchain_db_headers}
   ${blockchain_db_private_headers})

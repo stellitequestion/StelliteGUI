@@ -1,4 +1,4 @@
-# Copyright (c) 2014-2017, The Stellite Project
+# Copyright (c) 2014-2017, The Monero Project
 #
 # All rights reserved.
 #
@@ -68,9 +68,9 @@ set(crypto_private_headers
   skein.h
   skein_port.h)
 
-stellite_private_headers(cncrypto
+monero_private_headers(cncrypto
   ${crypto_private_headers})
-stellite_add_library(cncrypto
+monero_add_library(cncrypto
   ${crypto_sources}
   ${crypto_headers}
   ${crypto_private_headers})

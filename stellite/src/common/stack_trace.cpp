@@ -1,4 +1,4 @@
-// Copyright (c) 2016, The Stellite Project
+// Copyright (c) 2016, The Monero Project
 //
 // All rights reserved.
 //

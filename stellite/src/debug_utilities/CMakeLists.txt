@@ -1,4 +1,4 @@
-# Copyright (c) 2014-2017, The Stellite Project
+# Copyright (c) 2014-2017, The Monero Project
 #
 # All rights reserved.
 #
@@ -30,7 +30,7 @@ set(cn_deserialize_sources
   cn_deserialize.cpp
   )
 
-stellite_add_executable(cn_deserialize
+monero_add_executable(cn_deserialize
   ${cn_deserialize_sources}
   ${cn_deserialize_private_headers})
 
@@ -47,14 +47,14 @@ add_dependencies(cn_deserialize
 	version)
 set_property(TARGET cn_deserialize
 	PROPERTY
-	OUTPUT_NAME "stellite-utils-deserialize")
+	OUTPUT_NAME "monero-utils-deserialize")
 
 
 set(object_sizes_sources
   object_sizes.cpp
   )
 
-stellite_add_executable(object_sizes
+monero_add_executable(object_sizes
   ${object_sizes_sources}
   ${object_sizes_private_headers})
 
@@ -70,5 +70,5 @@ add_dependencies(object_sizes
 	version)
 set_property(TARGET object_sizes
 	PROPERTY
-	OUTPUT_NAME "stellite-utils-object-sizes")
+	OUTPUT_NAME "monero-utils-object-sizes")
 

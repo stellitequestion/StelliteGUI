@@ -1,4 +1,4 @@
-# Copyright (c) 2014-2017, The Stellite Project
+# Copyright (c) 2014-2017, The Monero Project
 #
 # All rights reserved.
 #
@@ -48,9 +48,9 @@ set(mnemonics_private_headers
   spanish.h
   esperanto.h)
 
-stellite_private_headers(mnemonics
+monero_private_headers(mnemonics
   ${mnemonics_private_headers})
-stellite_add_library(mnemonics
+monero_add_library(mnemonics
   ${mnemonics_sources}
   ${mnemonics_headers}
   ${mnemonics_private_headers})

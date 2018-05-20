@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2017, The Stellite Project
+// Copyright (c) 2014-2017, The Monero Project
 //
 // All rights reserved.
 //
@@ -59,7 +59,7 @@ namespace
   const command_line::arg_descriptor<bool> arg_trusted_daemon = {"trusted-daemon", "Enable commands which rely on a trusted daemon", false};
   const command_line::arg_descriptor<std::string> arg_wallet_dir = {"wallet-dir", "Directory for newly created wallets"};
 
-  constexpr const char default_rpc_username[] = "stellite";
+  constexpr const char default_rpc_username[] = "monero";
 }
 
 namespace tools
@@ -379,7 +379,7 @@ namespace tools
           }
           if (addresses.empty())
           {
-            er.message = std::string("No Stellite address found at ") + url;
+            er.message = std::string("No Monero address found at ") + url;
             return {};
           }
           return addresses[0];
@@ -1084,7 +1084,7 @@ namespace tools
         }
         if (addresses.empty())
         {
-          er.message = std::string("No Stellite address found at ") + url;
+          er.message = std::string("No Monero address found at ") + url;
           return {};
         }
         return addresses[0];
@@ -1496,7 +1496,7 @@ namespace tools
         }
         if (addresses.empty())
         {
-          er.message = std::string("No Stellite address found at ") + url;
+          er.message = std::string("No Monero address found at ") + url;
           return {};
         }
         return addresses[0];

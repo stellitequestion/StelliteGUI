@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2017, The Stellite Project
+// Copyright (c) 2014-2017, The Monero Project
 //
 // All rights reserved.
 //
@@ -78,4 +78,4 @@ private:
 
 } // namespace
 
-namespace Bitstellite = Monero;
+namespace Bitmonero = Monero;

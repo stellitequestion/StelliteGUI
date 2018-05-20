@@ -1,4 +1,4 @@
-# Copyright (c) 2016, The Stellite Project
+# Copyright (c) 2016, The Monero Project
 #
 # All rights reserved.
 #
@@ -39,9 +39,9 @@ set(ringct_private_headers
   rctSigs.h
   rctTypes.h)
 
-stellite_private_headers(ringct
+monero_private_headers(ringct
   ${crypto_private_headers})
-stellite_add_library(ringct
+monero_add_library(ringct
   ${ringct_sources}
   ${ringct_headers}
   ${ringct_private_headers})

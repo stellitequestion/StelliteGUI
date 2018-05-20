@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2017, The Stellite Project
+// Copyright (c) 2014-2017, The Monero Project
 //
 // All rights reserved.
 //
@@ -102,7 +102,7 @@ namespace nodetool
     const command_line::arg_descriptor<int64_t> arg_limit_rate_down = {"limit-rate-down", "set limit-rate-down [kB/s]", -1};
     const command_line::arg_descriptor<int64_t> arg_limit_rate = {"limit-rate", "set limit-rate [kB/s]", -1};
 
-    const command_line::arg_descriptor<bool> arg_save_graph = {"save-graph", "Save data for dr stellite", false};
+    const command_line::arg_descriptor<bool> arg_save_graph = {"save-graph", "Save data for dr monero", false};
   }
   //-----------------------------------------------------------------------------------
   template<class t_payload_net_handler>
@@ -413,10 +413,9 @@ namespace nodetool
     }
     else
     {
-      full_addrs.insert("54.38.44.3:20188");
-      full_addrs.insert("85.25.35.35:20188");
-      full_addrs.insert("107.191.63.92:20188");
-      full_addrs.insert("172.110.10.6:20188");
+      full_addrs.insert("82.236.69.249:20188");
+      full_addrs.insert("62.75.160.163:20188");
+      full_addrs.insert("209.250.237.61:20188");
     }
     return full_addrs;
   }

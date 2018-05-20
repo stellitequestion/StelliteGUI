@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2017, The Stellite Project
+// Copyright (c) 2014-2017, The Monero Project
 //
 // All rights reserved.
 //
@@ -1239,6 +1239,9 @@ namespace cryptonote
      */
     bool check_block_timestamp(const block& b) const;
 
+    bool check_block_timestamp(std::vector<uint64_t>& timestamps, const block& b, uint64_t& median_ts) const;
+    bool check_median_block_timestamp(const block& b, uint64_t& median_ts) const;
+
     /**
      * @brief checks a block's timestamp
      *
@@ -1309,7 +1312,7 @@ namespace cryptonote
      * @brief loads block hashes from compiled-in data set
      *
      * A (possibly empty) set of block hashes can be compiled into the
-     * stellite daemon binary.  This function loads those hashes into
+     * monero daemon binary.  This function loads those hashes into
      * a useful state.
      */
     void load_compiled_in_block_hashes();

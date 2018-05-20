@@ -1,4 +1,4 @@
-# Copyright (c) 2014-2017, The Stellite Project
+# Copyright (c) 2014-2017, The Monero Project
 #
 # All rights reserved.
 #
@@ -47,9 +47,9 @@ else()
   set(Blocks "")
 endif()
 
-stellite_private_headers(cryptonote_core
+monero_private_headers(cryptonote_core
   ${crypto_private_headers})
-stellite_add_library(cryptonote_core
+monero_add_library(cryptonote_core
   ${cryptonote_core_sources}
   ${cryptonote_core_headers}
   ${cryptonote_core_private_headers})

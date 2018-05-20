@@ -1,4 +1,4 @@
-# Copyright (c) 2014-2017, The Stellite Project
+# Copyright (c) 2014-2017, The Monero Project
 #
 # All rights reserved.
 #
@@ -59,9 +59,9 @@ set(cryptonote_basic_private_headers
   tx_extra.h
   verification_context.h)
 
-stellite_private_headers(cryptonote_basic
+monero_private_headers(cryptonote_basic
   ${crypto_private_headers})
-stellite_add_library(cryptonote_basic
+monero_add_library(cryptonote_basic
   ${cryptonote_basic_sources}
   ${cryptonote_basic_headers}
   ${cryptonote_basic_private_headers})

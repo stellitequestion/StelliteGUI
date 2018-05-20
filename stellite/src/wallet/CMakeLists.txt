@@ -1,4 +1,4 @@
-# Copyright (c) 2014-2017, The Stellite Project
+# Copyright (c) 2014-2017, The Monero Project
 #
 # All rights reserved.
 #
@@ -64,9 +64,9 @@ set(wallet_private_headers
   api/address_book.h
   api/unsigned_transaction.h)
 
-stellite_private_headers(wallet
+monero_private_headers(wallet
   ${wallet_private_headers})
-stellite_add_library(wallet
+monero_add_library(wallet
   ${wallet_sources}
   ${wallet_api_headers}
   ${wallet_private_headers})
@@ -95,9 +95,9 @@ if (NOT BUILD_GUI_DEPS)
   set(wallet_rpc_private_headers
     wallet_rpc_server.h)
 
-  stellite_private_headers(wallet_rpc_server
+  monero_private_headers(wallet_rpc_server
     ${wallet_rpc_private_headers})
-  stellite_add_executable(wallet_rpc_server
+  monero_add_executable(wallet_rpc_server
     ${wallet_rpc_sources}
     ${wallet_rpc_headers}
     ${wallet_rpc_private_headers})

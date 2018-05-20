@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2017, The Stellite Project
+// Copyright (c) 2014-2017, The Monero Project
 // 
 // All rights reserved.
 // 
@@ -130,11 +130,11 @@ namespace command_line
   const command_line::arg_descriptor<size_t> arg_block_sync_size  = {
     "block-sync-size"
   , "How many blocks to sync at once during chain synchronization (0 = adaptive)."
-  , 1
+  , 0
   };
   const command_line::arg_descriptor<std::string> arg_check_updates = {
     "check-updates"
-  , "Check for new versions of stellite: [disabled|notify|download|update]"
+  , "Check for new versions of monero: [disabled|notify|download|update]"
   , "notify"
   };
   const arg_descriptor<bool> arg_fluffy_blocks  = {
