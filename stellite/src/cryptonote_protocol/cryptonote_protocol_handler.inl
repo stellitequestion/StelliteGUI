@@ -1074,7 +1074,7 @@ skip:
               }
             }
             TIME_MEASURE_FINISH(transactions_process_time);
-            transactions_process_time_full += transactions_process_time;
+            transactions_process_time_full += transactions_process_time;  
 
             // process block
 
@@ -1125,7 +1125,7 @@ skip:
             TIME_MEASURE_FINISH(block_process_time);
             block_process_time_full += block_process_time;
 
-          } // each download block
+          } // each download block  
 
           MCINFO("sync-info", "Block process time (" << blocks.size() << " blocks, " << num_txs << " txs): " << block_process_time_full + transactions_process_time_full << " (" << transactions_process_time_full << "/" << block_process_time_full << ") ms");
 
