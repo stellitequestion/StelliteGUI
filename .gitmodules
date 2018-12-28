@@ -1,4 +1,0 @@
-[submodule "stellite"]
-	path = stellite
-	url = https://github.com/stellitecoin/stellite.git
-	ignore = all
